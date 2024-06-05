@@ -6,4 +6,4 @@ If you would like to follow along with us during the workshop, please set up the
 * If you already have a Contentful account and space, have at least one slot available for a new content type.
 
 ### For the code (frontend) of the project
-* Download the latest version of Node.
+* Download the latest version of Node. You need at least Node version 18.17.0.

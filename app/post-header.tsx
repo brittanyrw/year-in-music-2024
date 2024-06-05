@@ -1,36 +1,30 @@
-import Link from 'next/link'
-import { draftMode } from 'next/headers'
+import CoverImage from './cover-image'
 
-import Albums from './albums'
+const monthNames = ["January", "February", "March", "April", "May", "June",
+  "July", "August", "September", "October", "November", "December"
+];
 
-
-import { getAllAlbumPosts } from '@/lib/api'
-
-function Intro() {
+export default function PostHeader({ title, coverImage, date, artist, category, favoriteMonth } : {
+  title: string
+  coverImage: string
+  date: string
+  artist: string
+  category: [],
+  favoriteMonth: string
+}) {
   return (
-    <section className="hero">
-      <h1 className="title">
-        <Link href="/">
-          Year in music.
-        </Link>
-      </h1>
-      <p className="intro">
-        Spotify Wrapped is neat but it really only tracks what we binge listen to. Use this project to keep track of the albums that defined each month for you.
-      </p>
-    </section>
-  )
-}
-
-export default async function Page() {
-  const { isEnabled } = draftMode()
-  const allPosts = await getAllAlbumPosts(isEnabled)
-
-  return (
-    <div>
-      <Intro />
-      <section className="home-albums">
-        <Albums posts={allPosts} />
-      </section>
-    </div>
+    <>
+      <div className="album-page-header">
+        <CoverImage title={title} url={coverImage} />
+        <div className="album-page-info">
+          <h2>{monthNames[new Date(favoriteMonth).getUTCMonth()]}</h2>
+          <h1>{title} ({date})</h1>
+          <p className="album-page-subtitle">{artist}</p>
+          <ul className="music-labels">
+            {category?.map((item: string) => <li className="category" key={item}>{item}</li>)}
+          </ul>
+        </div>
+      </div>
+    </>
   )
 }
