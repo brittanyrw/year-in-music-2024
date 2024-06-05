@@ -5,8 +5,7 @@ This is the code for the example project for the 2024 Render introduction to Con
 ![Screenshot of Year In Music example project](./docs/project-example-screenshot.png)
 
 ## Demo
-
-### TBA
+[Year in  Music Live Demo](year-in-music-2024.vercel.app)
 
 ## How to use
 
