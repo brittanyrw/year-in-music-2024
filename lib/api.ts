@@ -39,7 +39,6 @@ function extractAlbumPost(fetchResponse: any): any {
 }
 
 function extractAlbumPostEntries(fetchResponse: any): any[] {
-  console.log(fetchResponse?.data?.albumCollection?.items)
   return fetchResponse?.data?.albumCollection?.items
 }
 
