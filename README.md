@@ -88,7 +88,6 @@ Once the content model is saved, add these fields (you don't have to modify the 
 - `Artist Name` - **Text** field (type **short text**). 
 - `Favorite Month` - **Date** field
 - `Thoughts` - **Rich text** field
-- `Category` - **Text** field (type **short text list**). 
 - `Favorite` - **Boolean** field. 
 
 Save the content type and continue.

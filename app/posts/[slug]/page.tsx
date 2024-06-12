@@ -46,7 +46,6 @@ export default async function PostPage({
                 date={post.releaseYear}
                 favoriteMonth={post.favoriteMonth}
                 artist={post.artistName}
-                category={post.category}
               />
               <div className="rich-text-content">
               <Markdown content={post.thoughts} />

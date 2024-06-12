@@ -9,7 +9,6 @@ releaseYear
 artistName
 favoriteMonth
 favorite
-category
 thoughts {
   json
 }
